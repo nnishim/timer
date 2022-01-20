@@ -1,3 +1,118 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Calibri;
+}
+
+body.lock {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.wrapper {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.results__block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.results__item {
+  margin-bottom: 15px;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.timer__block {
+  width: 150px;
+  border-radius: 10px;
+}
+.timer__block .time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  font-size: 95px;
+  border-radius: 10px 10px 0 0;
+  background-color: #1abc9c;
+  color: #fff;
+}
+.timer__block .title {
+  padding: 5px;
+  color: #fff;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  background-color: #16a085;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+.buttons .btn {
+  border: 1px solid #2bcbba;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #fff;
+  padding: 15px 45px;
+  background-color: #2bcbba;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.buttons .btn:hover {
+  background-color: transparent;
+  color: #2bcbba;
+}
 
 /*# sourceMappingURL=style.css.map */

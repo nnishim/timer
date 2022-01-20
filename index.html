@@ -5,11 +5,39 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="./css/style.css">
-	<title>Document</title>
+	<title>Timer</title>
 </head>
 <body>
 
+	<div class="container">
+		<div class="timer">
+			<div class="timer__block">
+				<div class="time minute">00</div>
+				<div class="title">Minute</div>
+			</div>
+			<div class="timer__block">
+				<div class="time second">00</div>
+				<div class="title">Second</div>
+			</div>
+			<div class="timer__block">
+				<div class="time millisecond">00</div>
+				<div class="title">Millisecond</div>
+			</div>
+		</div>
+
+		<div class="buttons">
+			<button class="btn start">Старт</button>
+			<button class="btn pause">Пауза</button>
+			<button class="btn new">Круг</button>
+			<button class="btn reset">Сброс</button>
+		</div>
+	</div>
+
+	<div class="results__block">
+		<div class="results"></div>
+	</div>
 	
-	
+
+	<script src="./js/main.js"></script>
 </body>
 </html>
