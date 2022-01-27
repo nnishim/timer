@@ -7,9 +7,11 @@ const pauseBtn = document.querySelector(`.pause`);
 const resetBtn = document.querySelector(`.reset`);
 const newBtn = document.querySelector(`.new`);
 
+document.querySelector(`.results`).innerHTML = `<i class="bi bi-x-lg cross"></i>`;
+
 let startButton = startBtn.addEventListener(`click`, () => {
 	clearInterval(interval);
-	interval = setInterval(Timer, 10)
+	interval = setInterval(Timer, 10);
 });
 
 let pauseButton = pauseBtn.addEventListener(`click`, () => {
@@ -20,10 +22,18 @@ let newButton = newBtn.addEventListener(`click`, () => {
 	clearInterval(interval);
 	const results = document.querySelector(`.results`);
 	let block = document.createElement(`div`);
+	block.className = `block`;
 	block.innerText = `Время круга - ${minute} : ${second} : ${millisecond}`;
+	let cross = document.createElement(`i`);
+	cross.className = `bi bi-x-lg cross`;
+	cross.addEventListener(`click`, function () {  
+		this.closest('.block').remove();
+	});
+	block.append(cross);
 	results.append(block);
 	clearFields();
 });
+
 
 let resetButton = resetBtn.addEventListener(`click`, () => {
 	clearInterval(interval);

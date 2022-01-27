@@ -64,6 +64,29 @@ body.lock {
   margin-bottom: 15px;
 }
 
+.results .cross {
+  display: none;
+}
+
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.block .cross {
+  display: block;
+}
+
+.cross {
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.cross:hover {
+  color: red;
+}
+
 .timer {
   display: flex;
   align-items: center;

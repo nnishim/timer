@@ -15,6 +15,27 @@
 	margin-bottom: 15px;
 }
 
+.results{
+	.cross{
+		display: none;
+	}
+}
+.block{
+	@include space-between;
+	margin-bottom: 15px;
+	.cross{
+		display: block;
+	}
+}
+.cross{
+	margin-left: 10px;
+	cursor: pointer;
+	transition: .3s ease-in-out;
+	&:hover{
+		color: red;
+	}
+}
+
 .timer{
 	@include space-between;
 	&__block{
