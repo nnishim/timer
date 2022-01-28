@@ -14,18 +14,9 @@
 .results__item{
 	margin-bottom: 15px;
 }
-
-.results{
-	.cross{
-		display: none;
-	}
-}
 .block{
 	@include space-between;
 	margin-bottom: 15px;
-	.cross{
-		display: block;
-	}
 }
 .cross{
 	margin-left: 10px;
@@ -35,7 +26,6 @@
 		color: red;
 	}
 }
-
 .timer{
 	@include space-between;
 	&__block{
@@ -58,7 +48,6 @@
 		}
 	}
 }
-
 .buttons{
 	@include space-between;
 	justify-content: space-around;

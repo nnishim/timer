@@ -7,7 +7,8 @@ const pauseBtn = document.querySelector(`.pause`);
 const resetBtn = document.querySelector(`.reset`);
 const newBtn = document.querySelector(`.new`);
 
-document.querySelector(`.results`).innerHTML = `<i class="bi bi-x-lg cross"></i>`;
+let result = [];
+
 
 let startButton = startBtn.addEventListener(`click`, () => {
 	clearInterval(interval);
@@ -18,20 +19,34 @@ let pauseButton = pauseBtn.addEventListener(`click`, () => {
 	clearInterval(interval);
 });
 
+let block;
+let cross;
+let results;
+
+function fillZero(unit) {
+	return unit < 10 ? `0` + unit : unit;
+}
+
 let newButton = newBtn.addEventListener(`click`, () => {
-	clearInterval(interval);
-	const results = document.querySelector(`.results`);
-	let block = document.createElement(`div`);
+	
+	results = document.querySelector(`.results`);
+	
+	block = document.createElement(`div`);
 	block.className = `block`;
-	block.innerText = `Время круга - ${minute} : ${second} : ${millisecond}`;
-	let cross = document.createElement(`i`);
+	block.innerText = `Время круга - ${fillZero(minute)} : ${fillZero(second)} : ${fillZero(millisecond)}`
+	
+	cross = document.createElement(`i`);
 	cross.className = `bi bi-x-lg cross`;
 	cross.addEventListener(`click`, function () {  
 		this.closest('.block').remove();
 	});
+	
 	block.append(cross);
 	results.append(block);
-	clearFields();
+
+	result.push(results);
+
+	localStorage.setItem(`records`, JSON.stringify(result));
 });
 
 
